@@ -2,6 +2,11 @@
 
 .link-color {
   color: #01a6a4;
+  text-decoration: none;
+}
+
+.link-color {
+  color: #01bfbd;
 }
 
 .label-text {
@@ -229,8 +234,31 @@ input, select, textarea {
 }
 
 /* 出身地 */
-.select-area {
+.from {
   width: 50%;
+}
+
+.from-select {
+  position: relative;
+}
+
+.select-area:focus {
+  background-color: #fbfbfb;
+  border-color: #d9d9d9;
+  box-shadow: initial;
+}
+
+.from-select::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-right: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+  transform: rotate(45deg);
+  height: 5px;
+  width: 5px;
+  right: 10px;
+  top: 45%;
 }
 
 /* コース選択 */
@@ -242,6 +270,10 @@ input, select, textarea {
 
 .course-option:last-child {
   margin-bottom: 0;
+}
+
+.course-option input {
+  display: none;
 }
 
 .course-text {
@@ -287,6 +319,7 @@ input, select, textarea {
   background-color: #01bfbd;
   color: #fff;
   border: 1px solid #01bfbd;
+  padding: 13px;
 }
 
 .send-button:hover {
@@ -314,4 +347,10 @@ input, select, textarea {
   margin-bottom: 8px;
   font-size: 12px;
   line-height: 16px;
+}
+
+.footer a:hover {
+  border-bottom: 1px solid #ececec;
+  border-color: #01bfbd;
+  box-sizing: border-box;
 }
